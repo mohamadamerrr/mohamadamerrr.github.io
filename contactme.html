@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<script src="myjsfile.js"></script>
+<style>
+.st1{
+background-color:black;
+color:white;
+padding:20px;
+text-align:center;
+}
+.st2{
+border:3px solid powderblue;
+}
+body {
+  font-family: Arial;
+}
+
+</style>
+</head>
+<body >
+<pre>
+<header>
+  <h2 class="st1">Contact Me</h2>
+</header>
+<!-- make the input rectangles in the middle of the page like one in the project's sheet by using pre tag --> 
+<form>
+                                                                                <label for="subject">Subject*</label><br>
+                                                                                <input  class="st2" type="text" id="subject" name="subject"><br>  
+                                                                                <label for="myemail">Email*</label><br>  
+                                                                                <input  class="st2" type="text" id="myemail" name="myemail"  >  <br>
+                                                                                <label for="myid">ID*</label><br>  
+                                                                                <input  class="st2" type="text" id="myid" name="myid"  >  <br>
+                                                                                <label for="myurl">URL*</label><br>  
+                                                                                <input  class="st2" type="text" id="myurl" name="myurl">  <br>
+                                                                                <label for="message">Message*</label><br>
+                                                                                <textarea style="border:2px powderblue;" id="message" rows="7" cols="24"> </textarea>
+                                                                                       <input type="submit" value="Submit" onclick="myfunction()"> 
+</form>
+
+<footer class="st1">
+  <p>@Copy Right 2020</p>
+  <a href="index.html">Go back to the main page</a>
+</footer>
+<script>
+function myfunction(){
+  var rsub = document.getElementById("subject").value;
+  var rem = document.getElementById("myemail").value;
+  var rid = document.getElementById("myid").value;
+  var rurl = document.getElementById("myurl").value;
+  var rmess = document.getElementById("message").value;
+  
+if(rsub==0)alert("subject field is empty");
+if(rem==0)alert("email field is empty");
+if(rid==0)alert("ID field is empty");
+if(rurl==0)alert("URL field is empty");
+if(rmess==0)alert("message field is empty");
+
+if(rsub.valueOf()>=0)alert("subject field contains non-string value");
+if(rmess.valueOf()>=0)alert("message field contains non-string value");
+if(!(rid.valueOf()>=0))alert("ID field contains string value it should be number value");
+
+var email = document.getElementById("myemail").value;
+var name   = email.substring(0, email.lastIndexOf("@"));
+var domain = email.substring(email.lastIndexOf("@") +1);
+alert( name );  
+alert( domain );
+
+var eurl = document.getElementById("myurl").value;
+var username = eurl.substring(0, eurl.IndexOf()("."));
+var resturl = eurl.substring(eurl.IndexOf()(".") +1);
+alert( username );  
+alert( resturl );
+}
+</script>
+</pre>
+</body>
+</html>
